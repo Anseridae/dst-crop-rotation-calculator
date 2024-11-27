@@ -1,0 +1,28 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://6awugasosj2a"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tlvyf"]
+bg_color = Color(0.796078, 0.721569, 0.54902, 0.890196)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lh3ii"]
+resource_name = "autom"
+bg_color = Color(0.400632, 0.292357, 0.128218, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0mlc5"]
+resource_name = "spring"
+bg_color = Color(0.252895, 0.522879, 0.315387, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_150ec"]
+resource_name = "summer"
+bg_color = Color(0.818276, 0.637696, 0.42566, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f4p0b"]
+resource_name = "winter"
+bg_color = Color(0.224307, 0.332097, 0.314143, 1)
+
+[resource]
+ItemList/colors/font_color = Color(0, 0, 0, 1)
+ItemList/styles/panel = SubResource("StyleBoxFlat_tlvyf")
+Panel/styles/bg_panel_autom = SubResource("StyleBoxFlat_lh3ii")
+Panel/styles/bg_panel_spring = SubResource("StyleBoxFlat_0mlc5")
+Panel/styles/bg_panel_summer = SubResource("StyleBoxFlat_150ec")
+Panel/styles/bg_panel_winter = SubResource("StyleBoxFlat_f4p0b")

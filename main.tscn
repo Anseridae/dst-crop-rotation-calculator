@@ -1,0 +1,504 @@
+[gd_scene load_steps=48 format=3 uid="uid://bpehg6ls0lo60"]
+
+[ext_resource type="Script" path="res://panel.gd" id="1_71ocg"]
+[ext_resource type="Theme" uid="uid://6awugasosj2a" path="res://default_theme.tres" id="1_ygkxu"]
+[ext_resource type="Texture2D" uid="uid://dqcphghbug27u" path="res://crop icons/Farm_Soil.webp" id="3_ojrs2"]
+[ext_resource type="Texture2D" uid="uid://kp7iwpa1frcd" path="res://crop icons/Toma_Root_Dropped.webp" id="3_y5yre"]
+[ext_resource type="Script" path="res://item_list.gd" id="4_2nesj"]
+[ext_resource type="Texture2D" uid="uid://byp0pdvjtyev8" path="res://crop icons/Eggplant_Dropped.webp" id="4_wt0ed"]
+[ext_resource type="Texture2D" uid="uid://drj7wsacnku8t" path="res://crop icons/Potato_Dropped.webp" id="5_1oouj"]
+[ext_resource type="Texture2D" uid="uid://c2vt3g0bb14h" path="res://crop icons/Dragon_Fruit_Dropped.webp" id="6_820yg"]
+[ext_resource type="Texture2D" uid="uid://c0ghraeu4yx8i" path="res://crop icons/Pepper_Dropped.webp" id="7_ymn6b"]
+[ext_resource type="Texture2D" uid="uid://ci1yavna8y6fi" path="res://crop icons/Carrot_Dropped.webp" id="8_54mc1"]
+[ext_resource type="Texture2D" uid="uid://bdvxs3jsnycv3" path="res://crop icons/Pumpkin_Dropped.webp" id="9_8ookb"]
+[ext_resource type="Texture2D" uid="uid://dsob5httmrups" path="res://crop icons/Onion_Dropped.webp" id="10_ack1f"]
+[ext_resource type="Texture2D" uid="uid://cf0hccs6egg46" path="res://crop icons/Pomegranate_Dropped.webp" id="11_j0ksl"]
+[ext_resource type="Texture2D" uid="uid://px7fkr4cxe4f" path="res://crop icons/Asparagus_Dropped.webp" id="12_shynn"]
+[ext_resource type="Texture2D" uid="uid://btckrh6me63qr" path="res://crop icons/Corn_Dropped.webp" id="13_narnl"]
+[ext_resource type="Texture2D" uid="uid://dh8wocuu1cdtu" path="res://crop icons/Durian_Dropped.webp" id="14_mflhu"]
+[ext_resource type="Texture2D" uid="uid://c5ry8ibs6m778" path="res://crop icons/Garlic_Dropped.webp" id="15_efofv"]
+[ext_resource type="Texture2D" uid="uid://b3klrjb8dohk4" path="res://crop icons/Watermelon_Dropped.webp" id="16_pi6ek"]
+[ext_resource type="Texture2D" uid="uid://1h6yq7r6mik7" path="res://nutrient icons/Spoiled_Fish_(DST).webp" id="18_rnrs3"]
+[ext_resource type="Texture2D" uid="uid://roenbpc3y5pn" path="res://nutrient icons/Rot.webp" id="19_tygca"]
+[ext_resource type="Texture2D" uid="uid://bapd3bhesq1t4" path="res://season icons/Bearger.webp" id="19_yrjm4"]
+[ext_resource type="Texture2D" uid="uid://b34nkd04fy2ex" path="res://nutrient icons/Manure.webp" id="20_b0cq2"]
+[ext_resource type="Texture2D" uid="uid://c4woxu4y1eb82" path="res://season icons/Mini_Glacier.png" id="20_ecx86"]
+[ext_resource type="Texture2D" uid="uid://dnotd6uuysmmq" path="res://season icons/Frog.webp" id="21_xq35t"]
+[ext_resource type="Texture2D" uid="uid://d2xi86bf5x4pv" path="res://season icons/Fire.webp" id="22_f7dwk"]
+[ext_resource type="Script" path="res://detritus.gd" id="23_gx3gl"]
+[ext_resource type="Texture2D" uid="uid://bmjdqhh00ea70" path="res://nutrient icons/32px-Restores_Compost.webp" id="23_ttyee"]
+[ext_resource type="Script" path="res://resource_counter.gd" id="23_v4wsr"]
+[ext_resource type="Texture2D" uid="uid://3rgl3qxh4fql" path="res://nutrient icons/32px-Consumes_Growth_Formula.webp" id="24_6vw6g"]
+[ext_resource type="Texture2D" uid="uid://cxl1qiio2t2uj" path="res://nutrient icons/32px-Manure_Garden.webp" id="25_nw368"]
+[ext_resource type="Texture2D" uid="uid://lbi6iervlmgi" path="res://Placeholder.png" id="28_gnhn7"]
+[ext_resource type="Script" path="res://margin_container_7.gd" id="29_j0trp"]
+[ext_resource type="Texture2D" uid="uid://bu1euanjnqaf1" path="res://nutrient icons/Bucket-o-poop_Dropped.webp" id="31_amvi3"]
+[ext_resource type="Texture2D" uid="uid://e42aggygpx2x" path="res://nutrient icons/Guano_Dropped.webp" id="32_8uh8d"]
+[ext_resource type="Texture2D" uid="uid://bniw8cqek7e60" path="res://nutrient icons/Rotten_Egg.png" id="34_ew7wa"]
+[ext_resource type="Texture2D" uid="uid://cqflsp3kunkuo" path="res://nutrient icons/Compost_Dropped.webp" id="35_g8832"]
+[ext_resource type="Texture2D" uid="uid://blkblug6no75s" path="res://nutrient icons/Spoiled_Fish_Morsel.webp" id="36_4xmr2"]
+[ext_resource type="Texture2D" uid="uid://bnevhewylecyq" path="res://nutrient icons/Growth_Formula_Starter.webp" id="36_phgw6"]
+[ext_resource type="Texture2D" uid="uid://c5x5pop1y5ie1" path="res://nutrient icons/Fermenting_Growth_Formula.webp" id="37_rci0v"]
+[ext_resource type="Texture2D" uid="uid://bpfysqytx3pvw" path="res://nutrient icons/Fermented_Growth_Formula.webp" id="38_k5uii"]
+[ext_resource type="Texture2D" uid="uid://cejad0enmy08k" path="res://nutrient icons/Super_Growth_Formula.webp" id="41_1rbtb"]
+[ext_resource type="Texture2D" uid="uid://o40ee05ysx3g" path="res://nutrient icons/Glommer's_Goop_Dropped.webp" id="42_hcjvw"]
+[ext_resource type="Texture2D" uid="uid://sh0c3t4tx4xu" path="res://nutrient icons/Fertilizzzer.webp" id="43_l8ldo"]
+[ext_resource type="Texture2D" uid="uid://dupijks4yjv23" path="res://nutrient icons/Tree_Jam.webp" id="44_yvh2h"]
+[ext_resource type="Texture2D" uid="uid://cy6022ge3ergi" path="res://nutrient icons/Compost_Wrap.webp" id="45_g5fw4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b4wob"]
+bg_color = Color(0.273472, 0.233287, 0.138665, 0.890196)
+
+[sub_resource type="GDScript" id="GDScript_6x7to"]
+script/source = "extends ItemList
+
+
+func _on_item_selected(index: int) -> void:
+	SelectedCrop.crop = get_item_icon(index)
+	SelectedCrop.crop_index = index
+"
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_ygkxu")
+script = ExtResource("1_71ocg")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -224.0
+offset_top = -214.5
+offset_right = 224.0
+offset_bottom = 214.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="crop_plot" type="ItemList" parent="Panel/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_b4wob")
+allow_reselect = true
+allow_search = false
+item_count = 9
+max_columns = 3
+same_column_width = true
+icon_mode = 0
+fixed_icon_size = Vector2i(140, 136)
+item_0/icon = ExtResource("3_ojrs2")
+item_1/icon = ExtResource("3_ojrs2")
+item_2/icon = ExtResource("3_ojrs2")
+item_3/icon = ExtResource("3_ojrs2")
+item_4/icon = ExtResource("3_ojrs2")
+item_5/icon = ExtResource("3_ojrs2")
+item_6/icon = ExtResource("3_ojrs2")
+item_7/icon = ExtResource("3_ojrs2")
+item_8/icon = ExtResource("3_ojrs2")
+script = ExtResource("4_2nesj")
+
+[node name="MarginContainer2" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -237.0
+offset_top = 1.0
+offset_right = 1.0
+offset_bottom = -1.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="crop_seeds" type="ItemList" parent="Panel/MarginContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+allow_reselect = true
+allow_search = false
+auto_height = true
+item_count = 14
+max_columns = 2
+icon_mode = 0
+fixed_icon_size = Vector2i(107, 58)
+item_0/text = "-2 | -2 | 4"
+item_0/icon = ExtResource("3_y5yre")
+item_1/text = "2 | 2 | -4"
+item_1/icon = ExtResource("4_wt0ed")
+item_2/text = "2 | 2 | -4"
+item_2/icon = ExtResource("5_1oouj")
+item_3/text = "4 | 4 | -8"
+item_3/icon = ExtResource("6_820yg")
+item_4/text = "4 | 4 | -8"
+item_4/icon = ExtResource("7_ymn6b")
+item_5/text = "2 | -4 | 2"
+item_5/icon = ExtResource("8_54mc1")
+item_6/text = "2 | -4 | 2"
+item_6/icon = ExtResource("9_8ookb")
+item_7/text = "4 | -8 | 4"
+item_7/icon = ExtResource("10_ack1f")
+item_8/text = "4 | -8 | 4"
+item_8/icon = ExtResource("11_j0ksl")
+item_9/text = "-4 | 2 | 2"
+item_9/icon = ExtResource("12_shynn")
+item_10/text = "-4 | 2 | 2"
+item_10/icon = ExtResource("13_narnl")
+item_11/text = "-8 | 4 | 4"
+item_11/icon = ExtResource("14_mflhu")
+item_12/text = "-8 | 4 | 4"
+item_12/icon = ExtResource("15_efofv")
+item_13/text = "-2 | 4 | -2"
+item_13/icon = ExtResource("16_pi6ek")
+script = SubResource("GDScript_6x7to")
+
+[node name="MarginContainer3" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -87.5
+offset_right = 171.0
+offset_bottom = 87.5
+grow_vertical = 2
+
+[node name="OptionButton" type="OptionButton" parent="Panel/MarginContainer3"]
+layout_mode = 2
+alignment = 1
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+selected = 0
+item_count = 4
+popup/item_0/text = "autumn"
+popup/item_0/icon = ExtResource("19_yrjm4")
+popup/item_1/text = "winter"
+popup/item_1/icon = ExtResource("20_ecx86")
+popup/item_1/id = 1
+popup/item_2/text = "spring"
+popup/item_2/icon = ExtResource("21_xq35t")
+popup/item_2/id = 2
+popup/item_3/text = "summer"
+popup/item_3/icon = ExtResource("22_f7dwk")
+popup/item_3/id = 3
+
+[node name="MarginContainer4" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -110.0
+offset_top = -7.0
+offset_right = 111.0
+offset_bottom = 101.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 0
+
+[node name="resource_counter" type="ItemList" parent="Panel/MarginContainer4"]
+unique_name_in_owner = true
+layout_mode = 2
+tooltip_text = "compost / growth formula / manure"
+theme_override_constants/h_separation = 7
+item_count = 3
+max_columns = 3
+icon_mode = 0
+fixed_icon_size = Vector2i(64, 64)
+item_0/text = "0"
+item_0/icon = ExtResource("23_ttyee")
+item_0/selectable = false
+item_1/text = "0"
+item_1/icon = ExtResource("24_6vw6g")
+item_1/selectable = false
+item_2/text = "0"
+item_2/icon = ExtResource("25_nw368")
+item_2/selectable = false
+script = ExtResource("23_v4wsr")
+
+[node name="MarginContainer5" type="MarginContainer" parent="Panel"]
+layout_mode = 0
+offset_top = -26.0
+offset_right = 149.0
+offset_bottom = 131.0
+
+[node name="detritus" type="ItemList" parent="Panel/MarginContainer5"]
+layout_mode = 2
+allow_reselect = true
+allow_search = false
+item_count = 1
+icon_mode = 0
+fixed_icon_size = Vector2i(140, 136)
+item_0/icon = ExtResource("3_ojrs2")
+script = ExtResource("23_gx3gl")
+
+[node name="MarginContainer6" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -217.5
+offset_right = -122.5
+offset_bottom = 89.0
+grow_horizontal = 2
+
+[node name="Button" type="Button" parent="Panel/MarginContainer6"]
+layout_mode = 2
+icon = ExtResource("28_gnhn7")
+expand_icon = true
+
+[node name="MarginContainer7" type="MarginContainer" parent="Panel"]
+visible = false
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 338.0
+grow_vertical = 2
+script = ExtResource("29_j0trp")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer7"]
+layout_mode = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="Panel/MarginContainer7/VBoxContainer"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+
+[node name="info header" type="ItemList" parent="Panel/MarginContainer7/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+theme_override_constants/h_separation = 16
+allow_search = false
+item_count = 4
+max_columns = 4
+same_column_width = true
+icon_mode = 0
+item_0/text = "uses"
+item_0/selectable = false
+item_1/text = "compost"
+item_1/selectable = false
+item_2/text = "formula"
+item_2/selectable = false
+item_3/text = "manure"
+item_3/selectable = false
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/MarginContainer7/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ItemList" type="ItemList" parent="Panel/MarginContainer7/VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/v_separation = 9
+theme_override_constants/h_separation = 18
+allow_search = false
+item_count = 64
+max_columns = 4
+icon_mode = 0
+fixed_icon_size = Vector2i(64, 64)
+item_0/text = "1"
+item_0/icon = ExtResource("20_b0cq2")
+item_0/selectable = false
+item_1/text = "0"
+item_1/icon = ExtResource("23_ttyee")
+item_1/selectable = false
+item_2/text = "0"
+item_2/icon = ExtResource("24_6vw6g")
+item_2/selectable = false
+item_3/text = "8"
+item_3/icon = ExtResource("25_nw368")
+item_3/selectable = false
+item_4/text = "10"
+item_4/icon = ExtResource("31_amvi3")
+item_4/selectable = false
+item_5/text = "0"
+item_5/icon = ExtResource("23_ttyee")
+item_5/selectable = false
+item_6/text = "0"
+item_6/icon = ExtResource("24_6vw6g")
+item_6/selectable = false
+item_7/text = "16"
+item_7/icon = ExtResource("25_nw368")
+item_7/selectable = false
+item_8/text = "1"
+item_8/icon = ExtResource("32_8uh8d")
+item_8/selectable = false
+item_9/text = "0"
+item_9/icon = ExtResource("23_ttyee")
+item_9/selectable = false
+item_10/text = "0"
+item_10/icon = ExtResource("24_6vw6g")
+item_10/selectable = false
+item_11/text = "16"
+item_11/icon = ExtResource("25_nw368")
+item_11/selectable = false
+item_12/text = "1"
+item_12/icon = ExtResource("19_tygca")
+item_12/selectable = false
+item_13/text = "8"
+item_13/icon = ExtResource("23_ttyee")
+item_13/selectable = false
+item_14/text = "0"
+item_14/icon = ExtResource("24_6vw6g")
+item_14/selectable = false
+item_15/text = "0"
+item_15/icon = ExtResource("25_nw368")
+item_15/selectable = false
+item_16/text = "1"
+item_16/icon = ExtResource("34_ew7wa")
+item_16/selectable = false
+item_17/text = "16"
+item_17/icon = ExtResource("23_ttyee")
+item_17/selectable = false
+item_18/text = "0"
+item_18/icon = ExtResource("24_6vw6g")
+item_18/selectable = false
+item_19/text = "0"
+item_19/icon = ExtResource("25_nw368")
+item_19/selectable = false
+item_20/text = "1"
+item_20/icon = ExtResource("35_g8832")
+item_20/selectable = false
+item_21/text = "24"
+item_21/icon = ExtResource("23_ttyee")
+item_21/selectable = false
+item_22/text = "0"
+item_22/icon = ExtResource("24_6vw6g")
+item_22/selectable = false
+item_23/text = "0"
+item_23/icon = ExtResource("25_nw368")
+item_23/selectable = false
+item_24/text = "1"
+item_24/icon = ExtResource("36_4xmr2")
+item_24/selectable = false
+item_25/text = "0"
+item_25/icon = ExtResource("23_ttyee")
+item_25/selectable = false
+item_26/text = "8"
+item_26/icon = ExtResource("24_6vw6g")
+item_26/selectable = false
+item_27/text = "0"
+item_27/icon = ExtResource("25_nw368")
+item_27/selectable = false
+item_28/text = "1"
+item_28/icon = ExtResource("36_phgw6")
+item_28/selectable = false
+item_29/text = "0"
+item_29/icon = ExtResource("23_ttyee")
+item_29/selectable = false
+item_30/text = "8"
+item_30/icon = ExtResource("24_6vw6g")
+item_30/selectable = false
+item_31/text = "0"
+item_31/icon = ExtResource("25_nw368")
+item_31/selectable = false
+item_32/text = "1"
+item_32/icon = ExtResource("18_rnrs3")
+item_32/selectable = false
+item_33/text = "0"
+item_33/icon = ExtResource("23_ttyee")
+item_33/selectable = false
+item_34/text = "16"
+item_34/icon = ExtResource("24_6vw6g")
+item_34/selectable = false
+item_35/text = "0"
+item_35/icon = ExtResource("25_nw368")
+item_35/selectable = false
+item_36/text = "1"
+item_36/icon = ExtResource("37_rci0v")
+item_36/selectable = false
+item_37/text = "0"
+item_37/icon = ExtResource("23_ttyee")
+item_37/selectable = false
+item_38/text = "16"
+item_38/icon = ExtResource("24_6vw6g")
+item_38/selectable = false
+item_39/text = "0"
+item_39/icon = ExtResource("25_nw368")
+item_39/selectable = false
+item_40/text = "1"
+item_40/icon = ExtResource("38_k5uii")
+item_40/selectable = false
+item_41/text = "0"
+item_41/icon = ExtResource("23_ttyee")
+item_41/selectable = false
+item_42/text = "32"
+item_42/icon = ExtResource("24_6vw6g")
+item_42/selectable = false
+item_43/text = "0"
+item_43/icon = ExtResource("25_nw368")
+item_43/selectable = false
+item_44/text = "5"
+item_44/icon = ExtResource("41_1rbtb")
+item_44/selectable = false
+item_45/text = "0"
+item_45/icon = ExtResource("23_ttyee")
+item_45/selectable = false
+item_46/text = "32"
+item_46/icon = ExtResource("24_6vw6g")
+item_46/selectable = false
+item_47/icon = ExtResource("25_nw368")
+item_47/selectable = false
+item_48/text = "1"
+item_48/icon = ExtResource("42_hcjvw")
+item_48/selectable = false
+item_49/text = "8"
+item_49/icon = ExtResource("23_ttyee")
+item_49/selectable = false
+item_50/text = "8"
+item_50/icon = ExtResource("24_6vw6g")
+item_50/selectable = false
+item_51/text = "8"
+item_51/icon = ExtResource("25_nw368")
+item_51/selectable = false
+item_52/text = "1"
+item_52/icon = ExtResource("43_l8ldo")
+item_52/selectable = false
+item_53/text = "12"
+item_53/icon = ExtResource("23_ttyee")
+item_53/selectable = false
+item_54/text = "12"
+item_54/icon = ExtResource("24_6vw6g")
+item_54/selectable = false
+item_55/text = "12"
+item_55/icon = ExtResource("25_nw368")
+item_55/selectable = false
+item_56/text = "1"
+item_56/icon = ExtResource("44_yvh2h")
+item_56/selectable = false
+item_57/text = "32"
+item_57/icon = ExtResource("23_ttyee")
+item_57/selectable = false
+item_58/text = "8"
+item_58/icon = ExtResource("24_6vw6g")
+item_58/selectable = false
+item_59/text = "8"
+item_59/icon = ExtResource("25_nw368")
+item_59/selectable = false
+item_60/text = "1"
+item_60/icon = ExtResource("45_g5fw4")
+item_60/selectable = false
+item_61/text = "32"
+item_61/icon = ExtResource("23_ttyee")
+item_61/selectable = false
+item_62/text = "24"
+item_62/icon = ExtResource("24_6vw6g")
+item_62/selectable = false
+item_63/text = "24"
+item_63/icon = ExtResource("25_nw368")
+item_63/selectable = false
+
+[connection signal="item_selected" from="Panel/MarginContainer/crop_plot" to="Panel/MarginContainer/crop_plot" method="_on_item_selected"]
+[connection signal="item_selected" from="Panel/MarginContainer/crop_plot" to="Panel/MarginContainer4/resource_counter" method="_on_item_list_item_selected"]
+[connection signal="item_selected" from="Panel/MarginContainer2/crop_seeds" to="Panel/MarginContainer2/crop_seeds" method="_on_item_selected"]
+[connection signal="item_selected" from="Panel/MarginContainer3/OptionButton" to="Panel" method="_on_option_button_item_selected"]
+[connection signal="item_selected" from="Panel/MarginContainer5/detritus" to="Panel/MarginContainer5/detritus" method="_on_item_selected"]
+[connection signal="pressed" from="Panel/MarginContainer6/Button" to="Panel/MarginContainer7" method="_on_button_pressed"]
